@@ -6,8 +6,6 @@ public class PillBottle : MonoBehaviour, IInteractable, IHoverable
 
     public void Interact()
     {
-        Debug.Log("Interacted with '" + gameObject.name + "'");
-
         var body = ObjectLocator.Body;
         if(body == null) return;
 

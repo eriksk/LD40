@@ -15,7 +15,7 @@ public class ProgressBar : MonoBehaviour
         if(ProgressImage == null) return;
 
         ProgressImage.rectTransform.sizeDelta = new Vector2(
-            MaxWidth * Value,
+            MaxWidth * Mathf.Clamp01(Value),
             ProgressImage.rectTransform.sizeDelta.y
         );
     }
