@@ -13,16 +13,24 @@ public class InteractionCrosshairs : MonoBehaviour
 
     void Update()
     {
+        var interacting = Input.GetMouseButtonDown(0);
+
         RaycastHit hit;
         if(Physics.Raycast(transform.position, transform.forward, out hit, InteractionDistance, InteractionMask))
         {
             var hitObject = hit.collider.gameObject;
-            // var interactable = hitObject.GetComponent<IInteractable>();
+            var interactable = hitObject.GetComponent<IInteractable>();
+            var hoverable = hitObject.GetComponent<IHoverable>();
 
-            // if(interactable != null)
-            // {
-                
-            // }
+            if(hoverable != null)
+            {
+                hoverable.OnHover();
+            }
+
+            if(interactable != null && interacting)  
+            {
+                interactable.Interact();
+            }
             CrosshairsImage.color = Color.green;
             CrosshairsImage.rectTransform.localScale = Vector3.one * 3f;
         }

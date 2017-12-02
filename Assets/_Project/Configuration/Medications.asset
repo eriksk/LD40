@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa55181633dd147e49ee03ef5ff1bb53, type: 3}
+  m_Name: Medications
+  m_EditorClassIdentifier: 
+  Items:
+  - {fileID: 11400000, guid: a1125d04f1ea646928f638617e806924, type: 2}
+  - {fileID: 11400000, guid: ef2130ee91d3b4fe99367df721fbee4f, type: 2}
+  - {fileID: 11400000, guid: 6113d2e3cb67d4b3281f161d846e3409, type: 2}
