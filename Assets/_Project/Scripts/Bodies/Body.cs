@@ -13,6 +13,7 @@ public class Body : MonoBehaviour
 
     public void TakeMedication(Medication meds)
     {
+        Debug.Log("Taking meds: " + meds.name);
         Infection += meds.Infection;
         Coughing += meds.Coughing;
         Fever += meds.Fever;
